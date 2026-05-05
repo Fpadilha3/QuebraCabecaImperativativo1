@@ -59,3 +59,24 @@ code {
   color: #93c5fd;
   overflow-x: auto;
 }
+
+/* ========================= */
+/* BOTÃO VOLTAR (ADICIONADO) */
+/* ========================= */
+
+.btn-voltar {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}

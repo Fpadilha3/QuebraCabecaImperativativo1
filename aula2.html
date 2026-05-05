@@ -11,6 +11,11 @@
 
   <main class="container">
 
+    <!-- BOTÃO VOLTAR -->
+    <a href="index.html">
+      <button class="btn-voltar">⬅ Voltar</button>
+    </a>
+
     <h1>Frontend Inteligente com JavaScript</h1>
 
     <section>
@@ -33,7 +38,6 @@
     <section>
       <h2>🚀 Manipulação de Classes</h2>
       <div class="card">
-        <p>Podemos alterar o estilo de um elemento usando classes.</p>
 
 <pre><code>
 elemento.classList.add("ativa");
@@ -48,8 +52,6 @@ elemento.classList.toggle("ativa");
     <section>
       <h2>🧠 Estado Dinâmico</h2>
       <div class="card">
-        <p>Agora não precisamos mais de variáveis separadas.</p>
-        <p>O próprio elemento indica seu estado.</p>
 
 <pre><code>
 if (elemento.classList.contains("ativa")) {
@@ -63,18 +65,9 @@ if (elemento.classList.contains("ativa")) {
     <section>
       <h2>📦 Trabalhando com Vários Elementos</h2>
       <div class="card">
-        <p>Podemos selecionar vários elementos ao mesmo tempo:</p>
 
 <pre><code>
 const pecas = document.querySelectorAll(".peca");
-</code></pre>
-
-        <p>Depois percorremos todos com:</p>
-
-<pre><code>
-pecas.forEach(function(peca) {
-  // código aqui
-});
 </code></pre>
 
       </div>
@@ -83,7 +76,6 @@ pecas.forEach(function(peca) {
     <section>
       <h2>🖱️ Eventos em Múltiplos Elementos</h2>
       <div class="card">
-        <p>Cada peça pode reagir ao clique:</p>
 
 <pre><code>
 pecas.forEach(function(peca) {
@@ -101,56 +93,9 @@ pecas.forEach(function(peca) {
     <section>
       <h2>🧩 Evolução do Projeto</h2>
       <div class="card">
-        <p>Agora o sistema fica mais avançado:</p>
         <p>• várias peças funcionando ao mesmo tempo</p>
         <p>• interação direta</p>
         <p>• mudança visual dinâmica</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>💻 Exemplo Completo</h2>
-      <div class="card">
-
-<pre><code>
-// Seleciona todas as peças
-const pecas = document.querySelectorAll(".peca");
-
-// Seleciona contador
-const contador = document.getElementById("contador");
-
-// Função contador
-function atualizar() {
-  const ativas = document.querySelectorAll(".peca.ativa");
-  contador.innerText = ativas.length;
-}
-
-// Evento
-pecas.forEach(function(peca) {
-
-  peca.addEventListener("click", function() {
-
-    peca.classList.toggle("ativa");
-    peca.classList.toggle("bloqueada");
-
-    const icone = peca.querySelector(".icone");
-    const texto = peca.querySelector("p");
-
-    if (peca.classList.contains("ativa")) {
-      icone.innerText = "🧩";
-      texto.innerText = "Peça ativada";
-    } else {
-      icone.innerText = "🔒";
-      texto.innerText = "Clique para ativar";
-    }
-
-    atualizar();
-
-  });
-
-});
-</code></pre>
-
       </div>
     </section>
 
